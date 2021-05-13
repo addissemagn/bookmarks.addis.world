@@ -1,0 +1,44 @@
+/* Toggle switch, modified from https://codepen.io/mburnette/pen/LxNxNg */
+.toggle input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+.toggle label {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 32px;
+	height: 17px;
+	background: grey;
+	display: block;
+	border-radius: 100px;
+    position: relative;
+
+    margin-top: -15px !important; /* forgive me CSS gods */
+}
+
+.toggle label:after {
+	content: '';
+	position: absolute;
+	top: 1px;
+	left: 1px;
+	width: 15px;
+	height: 15px;
+	background: #fff;
+	border-radius: 90px;
+	transition: 0.3s;
+}
+
+.toggle:after {
+    content: none !important; /* remove link underline */
+}
+
+.toggle input:checked + label {
+	background: #F49E0B;
+}
+
+.toggle input:checked + label:after {
+	left: calc(100% - 1.5px);
+	transform: translateX(-100%);
+}

@@ -1,0 +1,49 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js
+
+PATH: 
+  C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\asema\bin;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Brackets\command;C:\Program Files\Git\cmd;C:\Program Files\PuTTY;C:\Program Files\Intel\WiFi\bin;C:\Program Files\Common Files\Intel\WirelessCommon;C:\Program Files\MATLAB\R2019b\bin;C:\ProgramData\chocolatey\bin;C:\ProgramData\nvm;C:\Program Files\nodejs;C:\Program Files\nodejs;C:\Program Files (x86)\Yarn\bin;C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\bin;C:\Users\asema\Downloads\apache-maven-3.6.3\bin;C:\Program Files (x86)\Calibre2;C:\Ruby26-x64\bin;C:\Users\asema\AppData\Local\Microsoft\WindowsApps;C:\Users\asema\AppData\Local\Programs\Microsoft VS Code\bin;C:\ProgramData\asema\GitHubDesktop\bin;C:\Users\asema\AppData\Local\Programs\Microsoft VS Code Insiders\bin;C:\Users\asema\AppData\Roaming\Dashlane\6.1944.0.25283\bin\Firefox_Extension\{442718d9-475e-452a-b3e1-fb1ee16b8e9f}\components;C:\Users\asema\AppData\Roaming\Dashlane\6.1944.0.25283\ucrt;C:\Users\asema\AppData\Roaming\Dashlane\6.1944.0.25283\bin\Qt;C:\Users\asema\AppData\Roaming\Dashlane\6.1944.0.25283\bin\Ssl;C:\ProgramData\chocolatey\lib\gsudo\bin;C:\Users\asema\AppData\Roaming\npm;C:\Users\asema\AppData\Local\Yarn\bin;C:\Users\asema\AppData\Local\atom\bin;C:\Program Files\heroku\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.1\bin;C:\Program Files\apache-maven-3.6.3\bin;C:\Users\asema\spicetify-cli;C:\Program Files (x86)\GitHub CLI;C:\Program;C:\Users\asema\AppData\Local\hyper\app-3.0.2\resources\bin;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps
+
+Yarn version: 
+  1.22.0
+
+Node version: 
+  12.16.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  SyntaxError: C:\Users\asema\github\bookmarks.addis.world\frontend\package.json: Unexpected token } in JSON at position 410
+      at JSON.parse (<anonymous>)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (C:\Program Files (x86)\Yarn\lib\cli.js:310:30)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "bookmarks.addis.world",
+    "version": "1.0.0",
+    "description": "Addis Semagn's bookmarks website.",
+    "homepage": "https://bookmarks.addis.world",
+    "main": "index.js",
+    "repository": "git@github.com:addissemagn/bookmarks.addis.world.git",
+    "author": "Addis Semagn <asemagn@gmail.com>",
+    "license": "MIT",
+    "scripts": {
+      "dev": "preact watch",
+      "build": "preact build --no-prerender",
+    },
+    "dependencies": {
+      "preact": "^10.5.13",
+      "preact-cli": "^3.0.5",
+      "preact-router": "^3.2.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
