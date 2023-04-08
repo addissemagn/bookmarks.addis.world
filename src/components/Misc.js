@@ -43,6 +43,7 @@ export const Filters = ({ values, active, setActive, showImages, toggleImages, r
     >
       Sort by Recent
     </button>
+     | 
     <button
       className={`filter-button ${"" === active ? "filter-active" : ""}`}
       onClick={() => {
@@ -76,3 +77,49 @@ export const Search = ({ query, onQueryChange, count }) => (
     />
   </div>
 );
+
+export const MessageForm = ( { message, onMessageChange }) => {
+  // const [searchQuery, setSearchQuery] = useState("");
+
+  const handleInputChange = (event) => {
+    const { value } = e.target;
+    onMessageChange(value);
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    try {
+      const response = await fetch('https://your-backend-server.com/send-message', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ message: message })
+      });
+
+      if (response.ok) {
+        alert('Message sent successfully!');
+      } else {
+        const error = await response.json();
+        alert(`Error: ${error.message}`);
+      }
+    } catch (err) {
+      alert(`Error: ${err.message}`);
+    }
+  };
+
+  return (
+    <form onSubmit={handleSubmit} class="search small">
+        {/* <label for="message-text">Message:</label> */}
+        <input
+          type="text"
+          autoComplete="off"
+          spellCheck="false"
+          value={message}
+          placeholder={`link.com #tags note`}
+          onChange={handleInputChange}
+        />
+      </form>
+  )
+}

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "preact/hooks";
-import { Header, Filters, Search } from "./components/Misc.js";
+import { Header, Filters, Search, MessageForm } from "./components/Misc.js";
 import { getHost, replaceUnderscores, shorten } from "./utils";
 import info from "./info.js";
 import api from "./api";
@@ -67,6 +67,7 @@ const App = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [currTag, setCurrTag] = useState("");
   const [visibleBookmarks, setVisibleBookmarks] = useState([]);
+  const [message, setMessage] = useState("");
 
   const unique = (value, index, self) => {
     return self.indexOf(value) === index;
@@ -131,6 +132,11 @@ const App = () => {
       <Header
         heading={info.components.home.title}
         subheading={info.components.home.desc}
+      />
+      {/* This should only be if logged in */}
+      <MessageForm
+        message={message}
+        onMessageChange={setMessage}
       />
       <Filters
         values={allTags}
